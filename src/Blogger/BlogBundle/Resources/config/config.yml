@@ -1,3 +1,5 @@
 parameters:
     # Blogger contact email address
     blog.emails.contact_email: dimonst93333@gmail.com
+    # Blogger max latest comments
+    blog.comments.latest_comment_limit: 10
