@@ -12,7 +12,7 @@ class BlogController extends Controller
     /**
      * Show a blog entry
      */
-    public function showAction($id)
+    public function showAction($id, $slug)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -27,7 +27,8 @@ class BlogController extends Controller
 
         return $this->render('BlogBundle:Blog:show.html.twig', array(
             'blog'      => $blog,
-            'comments'  => $comments
+            'comments'  => $comments,
+            'slug' => $slug
         ));
     }
 }

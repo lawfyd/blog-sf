@@ -17,14 +17,14 @@ BlogBundle_contact:
         methods:  GET|POST
 
 BlogBundle_blog_show:
-    path:  /{id}
+    path:  /{id}/{slug}
     defaults: { _controller: "BlogBundle:Blog:show" }
     requirements:
         methods:  GET
         id: \d+
 
 BlogBundle_comment_create:
-    path:  /comment/{blog_id}
+    path:  /{blog_id}/{blog_slug}/
     defaults: { _controller: "BlogBundle:Comment:create" }
     requirements:
         methods:  POST
