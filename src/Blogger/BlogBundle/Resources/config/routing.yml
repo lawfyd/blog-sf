@@ -18,13 +18,13 @@ BlogBundle_contact:
 
 BlogBundle_blog_show:
     path:  /{id}/{slug}
-    defaults: { _controller: "BlogBundle:Blog:show" }
+    defaults: { _controller: "BlogBundle:Blog:show", comments: true }
     requirements:
         methods:  GET
         id: \d+
 
 BlogBundle_comment_create:
-    path:  /{blog_id}/{blog_slug}/
+    path:  /comment/{blog_id}
     defaults: { _controller: "BlogBundle:Comment:create" }
     requirements:
         methods:  POST
